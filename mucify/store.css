@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(finalstore.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    position: relative;
+}
+
+.logo {
+    width: 70px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 50%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.content {
+    width: calc(50% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
+    transition: 0.4s;
+    background: rgba(40, 36, 38, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        width: calc(100% - 30px);
+    }
+
+    .gallery {
+        margin: 15px 0; /* Reduced margin for smaller screens */
+    }
+}
+
+.content:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+}
+
+.bt {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.158);
+    background: linear-gradient(45deg, #9C9CD2, #6C6CAE);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.indi,
+.des,
+.price,
+.Cancel {
+    color: #333;
+}
+
+.indi {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.des {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.pic {
+    height: 50vh;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initail-scale=1.0" />
+    <title>Musify Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div style="padding-right: 70px; padding-top: 30px">
+        <img src="logonav.png" class="logo" />
+      </div>
+      <div style="padding-top: 30px">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="premium.html">Premium Plans</a></li>
+          <li><a href="about us.html">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="text-box">
+        <p
+          id="typing-animation"
+          style="font-size: 80px; padding-bottom: 50px"
+        ></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div id="copyright">
+            <p>&copy; Zencode. All rights reserved.</p>
+          </div>
+
+          <div class="quick-links">
+            <a href="about us.html">About us</a>
+            <a href="premium.html">Premium</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Text to be typed
+    const text = "Explore the Melodies of Music";
+
+    // Index to track the typing progress
+    let index = 0;
+
+    // Function to start typing animation
+    function type() {
+      if (index < text.length) {
+        // Append next character to the paragraph
+        document.getElementById("typing-animation").textContent +=
+          text.charAt(index);
+        index++;
+        // Call type function recursively after a short delay
+        setTimeout(type, 50);
+      }
+    }
+
+    // Start typing animation
+    type();
+  </script>
+</html>
